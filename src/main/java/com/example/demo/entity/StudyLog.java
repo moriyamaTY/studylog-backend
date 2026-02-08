@@ -8,9 +8,9 @@ public class StudyLog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String title;
-    private String memo;
+    @Column(name = "study_minutes")
+    private Integer minute;
     private LocalDate date;
 
     // getter / setter
@@ -20,8 +20,8 @@ public class StudyLog {
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
 
-    public String getMemo() { return memo; }
-    public void setMemo(String memo) { this.memo = memo; }
+    public Integer getMinute() { return minute; }
+    public void setMinute(Integer minute) { this.minute = minute; }
 
     public LocalDate getDate() { return date; }
     public void setDate(LocalDate date) { this.date = date; }
